@@ -1,0 +1,20 @@
+git clone https://github.com/KevinHaoranZhang/NUS_Capstone.git
+cd ~/NUS_Capstone/docker
+sudo docker rm -f instance1
+sudo docker rm -f instance2
+code Dockerfile
+
+sudo docker build -t myubuntu:latest .
+sudo docker run -d --shm-size=4gb --name instance1 myubuntu:latest
+code Dockerfile
+
+sudo docker build -t myubuntu2:latest .
+sudo docker run -d --shm-size=4gb --name instance2 myubuntu2:latest
+
+sudo docker ps -a
+sudo docker cp instance1:workspace/traces ./traces1
+sudo docker cp instance2:workspace/traces ./traces2
+sudo docker cp instance1:workspace/output.txt ./output1.txt
+sudo docker cp instance2:workspace/output.txt ./output2.txt
+sudo docker cp instance1:workspace/target_websites_status.txt ./target_websites_status1.txt
+sudo docker cp instance2:workspace/target_websites_status.txt ./target_websites_status2.txt
