@@ -5,7 +5,7 @@ The paper titled "DNS-over-QUIC and HTTP/3 in the Era of Transformers: The New I
 Levente Csikor, Ziyue Lian, Haoran Zhang, Nitya Lakshmanan, Dinil Mon Divakaran
 
 # Dataset
-The dataset is available on [IEEE Dataport](https://dx.doi.org/10.21227/km5h-g294)
+The dataset is available on [IEEE Dataport](https://dx.doi.org/10.21227/km5h-g294).
 
 ```
 @data{km5h-g294-24,
